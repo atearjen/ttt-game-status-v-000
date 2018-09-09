@@ -15,13 +15,15 @@ WIN_COMBINATIONS = [
   [2,4,6] #diagonal 2nd
 ]
 def won?(board)
-  WIN_COMBINATIONS.find do |win_combination|
+  WIN_COMBINATIONS.find { |win_combination|
 
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
     win_index_3 = win_combination[2]
-    
+    board[win_index_1] == "X" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
+    board[win_index_1] == "O" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3] }
   end
+  
 end
 
 def full?(board)
@@ -33,11 +35,11 @@ def full?(board)
 end
 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
-# 
+#
 # if not_emp
 #   if board[win_index_1] == "X" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
 #     return win_combination
-# 
+#
 # elsif board[win_index_1] == "O" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
 #     return win_combination
 #   end
