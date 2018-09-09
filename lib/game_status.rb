@@ -46,7 +46,9 @@ def over?(board)
   end
 end
 
-def 
+def winner?(board)
+  
+end
 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
 #
