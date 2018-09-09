@@ -36,6 +36,8 @@ def draw?(board)
     return false
   end
 end
+
+def 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
 #
 # if not_emp
