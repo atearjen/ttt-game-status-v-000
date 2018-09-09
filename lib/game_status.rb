@@ -54,9 +54,6 @@ def winner?(board)
   elsif board[index] == "O"
     return "O"
   end
-    
-  
-  
 end
 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
