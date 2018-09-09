@@ -48,13 +48,14 @@ end
 
 def winner(board)
   win_indices = won?(board)
+  if !win_indices
+    return false
+  end
   index = win_indices[0]
   if board[index] == "X"
     return "X"
   elsif board[index] == "O"
     return "O"
-  else
-    return nil
   end
 end
 
