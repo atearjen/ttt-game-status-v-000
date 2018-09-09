@@ -27,11 +27,7 @@ end
 
 def full?(board)
   full = board.all? {|num| position_taken?(board,num.to_i)}
-  if full
-    return true
-  else
-    return false
-  end
+  return full
 end
 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
