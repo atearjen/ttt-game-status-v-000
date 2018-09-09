@@ -25,8 +25,8 @@ def won?(board)
     if not_emp
       if board[win_index_1] == "X" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
         return win_combination
-      end
-      if board[win_index_1] == "O" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
+  
+    elsif board[win_index_1] == "O" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
         return win_combination
       end
     # else
