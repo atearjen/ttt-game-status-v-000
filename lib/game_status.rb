@@ -31,7 +31,6 @@ def won?(board)
     end
     # else
       # return false
-    end
     else
       return false
     end #for if statement
