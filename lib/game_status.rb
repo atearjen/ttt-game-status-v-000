@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6] #diagonal 2nd
 ]
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
+  WIN_COMBINATIONS.find do |win_combination|
 
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
@@ -25,7 +25,7 @@ def won?(board)
     if not_emp
       if board[win_index_1] == "X" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
         return win_combination
-  
+
     elsif board[win_index_1] == "O" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
         return win_combination
       end
@@ -35,7 +35,6 @@ def won?(board)
       return false
     end #for if statement
   end
-  return false
 end
 
 def full?(board)
