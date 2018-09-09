@@ -20,17 +20,17 @@ def won?(board)
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
     win_index_3 = win_combination[2]
-    not_emp = board.any? {|num| position_taken?(board,num.to_i) }
+    # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
 
-    if not_emp
-      if board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
-        return win_combination
-      else
-        return false
-      end
+    # if not_emp
+    if board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
+      return win_combination
     else
       return false
-    end #for if statement
+    end
+    # else
+      # return false
+    # end #for if statement
   end
 end
 
