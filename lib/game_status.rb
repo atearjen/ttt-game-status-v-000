@@ -23,7 +23,7 @@ def won?(board)
     board[win_index_1] == "X" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
     board[win_index_1] == "O" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3] }
   end
-  
+
 end
 
 def full?(board)
