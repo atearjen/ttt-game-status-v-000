@@ -26,7 +26,7 @@ def won?(board)
 end
 
 def full?(board)
-  full = board.all? {|num| !(board[num.to_i].nil? || board[num.to_i] == " ")}
+  full = board.all? {|num| position_taken?(board,num.to_i)}
   if full
     return true
   else
