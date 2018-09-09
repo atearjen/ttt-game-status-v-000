@@ -47,7 +47,10 @@ def over?(board)
 end
 
 def winner?(board)
-  
+  win_indices = won?(board)
+  index_1 = 
+  index_2 =
+  index_3 = 
 end
 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
