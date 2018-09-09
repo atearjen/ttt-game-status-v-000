@@ -48,9 +48,15 @@ end
 
 def winner?(board)
   win_indices = won?(board)
-  index_1 = win_indices[0]
-  index_2 = win_indices[1]
-  index_3 = win_indices[2]
+  index = win_indices[0]
+  if board[index] == "X"
+    return "X"
+  elsif board[index] == "O"
+    return "O"
+  end
+    
+  
+  
 end
 
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
