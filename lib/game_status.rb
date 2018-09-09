@@ -29,6 +29,7 @@ def full?(board)
   full = board.all? {|num| num == "X" || num == "O"}
   return full
 end
+
 def draw?(board)
   if !(won?(board)) && full?(board)
     return true
@@ -37,7 +38,14 @@ def draw?(board)
   end
 end
 
-def 
+def over?(board)
+  if won?(board) || draw?(board) || full?(board)
+    return true
+  else
+    return false
+  end
+end
+  
 # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
 #
 # if not_emp
