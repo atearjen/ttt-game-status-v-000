@@ -49,7 +49,7 @@ end
 def winner(board)
   win_indices = won?(board)
   if !win_indices
-    return false
+    return nil
   end
   index = win_indices[0]
   if board[index] == "X"
