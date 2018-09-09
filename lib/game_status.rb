@@ -23,7 +23,7 @@ def won?(board)
     # not_emp = board.any? {|num| position_taken?(board,num.to_i) }
 
     # if not_emp
-    if board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
+    if board[win_index_1] == "X" && board[win_index_1] == board[win_index_2] && board[win_index_1] == board[win_index_3]
       return win_combination
     else
       return false
